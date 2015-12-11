@@ -1,0 +1,48 @@
+#main_navigator {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00CC00;
+}
+
+.main_navigator {
+    float: left;
+}
+
+.main_navigator a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.main_navigator a:hover {
+    background-color: #B2FF66;
+}
+
+#secondary_navigator{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FF0000;
+}
+
+.secondary_navigator {
+    float: left;
+}
+
+.secondary_navigator a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: large;
+    padding: 7px 176px;
+    text-decoration: none;
+}
+
+.secondary_navigator a:hover {
+    background-color: #FF9999;
+}
