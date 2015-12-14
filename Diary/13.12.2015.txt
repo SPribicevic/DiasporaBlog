@@ -1,0 +1,2 @@
+- Uneo ceo kod za komentare
+- Posto nisu radili, poceo da trazim debuger

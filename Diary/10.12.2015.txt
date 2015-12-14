@@ -1,0 +1,2 @@
+- Added post.php
+- Created comment.class.php, started displaying comments in post.php

@@ -1,6 +1,7 @@
 <?php
     include('db_connect.php');
     include('comment.class.php');
+    include('debug.php');
     $id = $_GET['id'];
 ?>
 
@@ -17,17 +18,13 @@
     <link href="css/fonts.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/map.css" rel="stylesheet" type="text/css" />
+    <link href="css/country.css" rel="stylesheet" type="text/css"/>
+    <link href="css/comment.css" rel="stylesheet" type="text/css"/>
 
-    <script src="/A2EB891D63C8/avg_ls_dom.js" type="text/javascript"></script>
-    <script src="js/RequestAnimationFrame.js"></script>
+
     <script src="js/jquery.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-    <script src="js/raphael.js" type="text/javascript"></script>
-    <script src="js/raphaelAnimateViewBox.js" type="text/javascript"></script>
-    <script src="js/scale.raphael.js" type="text/javascript"></script>
-    <script src="js/paths.js" type="text/javascript"></script>
-    <script src="js/init.js" type="text/javascript"></script>
-    <link href="css/country.css" rel="stylesheet" type="text/css">
+    <script src="js/post.js" type="text/javascript"></script>
+
 
 </head>
 
@@ -40,7 +37,8 @@
     </ul>
 </div>
 
-    <div id="container">
+
+    <div id="post_container">
 
         <div id="comment">
             <?php
@@ -65,14 +63,9 @@
                 <p>Add a Comment</p>
                 <form id="addCommentForm" method="post" action="">
                     <div>
+
                         <label for="name">Your Name</label>
                         <input type="text" name="name" id="name" />
-
-                        <label for="email">Your Email</label>
-                        <input type="text" name="email" id="email" />
-
-                        <label for="url">Website (not required)</label>
-                        <input type="text" name="url" id="url" />
 
                         <label for="body">Comment Body</label>
                         <textarea name="body" id="body" cols="20" rows="5"></textarea>
@@ -103,8 +96,9 @@
         </div>
 
 
-    </div>
 
+
+    </div>
 
 
 

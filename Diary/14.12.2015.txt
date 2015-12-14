@@ -1,0 +1,3 @@
+- Nisam uspeo da namestim xdebuger
+- Provalio kako da ispisujem php variable u console.log
+- Poceo da koristim postmana za debug
