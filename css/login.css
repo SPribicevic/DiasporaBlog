@@ -1,0 +1,33 @@
+#header{
+    background-image: url("index_header_background.jpg");
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+#wrapper{
+    min-height:100%;
+    position:relative;
+}
+
+#register{
+    float: right;
+    position:relative;
+    left: -250px;
+    top: 60px;
+}
+
+#login{
+    float: left;
+    position:relative;
+    right: -250px;
+    top: 60px;
+}
+
+body{
+    background-image: url("index_background.jpg");
+    background-size: cover;
+    margin:0;
+    padding:0;
+    height:100%;
+}

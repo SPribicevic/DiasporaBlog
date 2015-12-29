@@ -5,27 +5,24 @@ $(document).ready(function(){
     var working = false;
 
     /* Listening to submit event on the  form */
-    $('#addCommentForm').submit(function(e){
+    $('#addPostForm').submit(function(e){
 
         e.preventDefault();
         if(working) return false;
         working = true;
 
-
-
         $('#sumbit').val = "Working...";
         $('span.error').remove();
 
-
         /* Sending the form fields to post.php. */
-        $.post('submit.php',$(this).serialize(),function(msg){
+        $.post('submitPost.php',$(this).serialize(),function(msg){
 
             working = false;
             $('submit').val("Submit");
 
             if(msg.status){
                 /* If the insert was successful, add new comment with a slideDown effect */
-                $(msg.html).hide().insertBefore('#addCommentContainer').slideDown();
+                $(msg.html).hide().insertBefore('#addPostContainer').slideDown();
                 $('#body').val('');
 
 

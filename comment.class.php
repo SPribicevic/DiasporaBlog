@@ -17,11 +17,11 @@
              $d['date_time'] = strtotime($d['date_time']);
 
             return '
-                <div id=comment>
-                    <div id="name">'.$d['name'].'</div>
+                <div class=comment>
+                    <div class="name">'.$d['name'].'</div>
                     <div class="date" title="Added at '.
                     date('H:i \o\n d M Y',$d['date_time']).'">'.
-                    date('d M Y',$d['date_time']).'</div>
+                    date('H:i \o\n d M Y',$d['date_time']).'</div>
                     <p>'.$d['body'].'</p>
                 </div>
             ';
@@ -65,6 +65,10 @@
                 $errors['name'] = "Please enter a name.";
             }
 
+            if(!($post_data['post_id'] = filter_input(INPUT_POST,'post_id',FILTER_SANITIZE_SPECIAL_CHARS))){
+                $errors['post_id'] = "There is no hidden field";
+            };
+            
             if(!empty($errors)){
                 // If there are errors, copy errors array to $arr
 

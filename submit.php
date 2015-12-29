@@ -12,7 +12,7 @@
         /* data is ready for database insertion */
 
 
-        $query_insert_comment_data = "INSERT INTO comments(creator,text) VALUES('".$arr['name']."','".$arr['body']."')";
+        $query_insert_comment_data = "INSERT INTO comments(name,body,post_id) VALUES('".$arr['name']."','".$arr['body']."','".$arr['post_id']."')";
         mysqli_query($mysqli,$query_insert_comment_data);
 
         $arr = array_map('stripslashes',$arr);
@@ -21,6 +21,7 @@
         $insert_comment = new Comment($arr);
 
         echo json_encode(array('status'=>1,'html'=>$insert_comment->markup()));
+
 
     }else{
         /* outputing error messages */
